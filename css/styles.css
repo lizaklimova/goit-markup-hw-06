@@ -129,6 +129,7 @@ input {
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 /*~ -----------HEADER-LOGO----------- */
@@ -160,19 +161,17 @@ input {
 }
 
 /*! ---------MOBILE MENU---------  */
-/* .open-hamburger {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
-/* .mob-menu {
+
+.mob-menu {
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
   background-color: var(--white-for-project);
   padding: 80px 24px 40px 40px;
+  transition: var(--transition);
+  /* overflow: auto; */
 }
 
 .mob-menu-wrap {
@@ -188,7 +187,7 @@ input {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 24px 0;
 }
 
 .mob-menu-open-icon {
@@ -196,8 +195,8 @@ input {
 }
 
 .mob-menu-close-btn {
-  background-color: #e7e9fc;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(231, 233, 252, 0.1);
+  border: 1px solid rgba(46, 47, 66, 0.1);
   width: 24px;
   height: 24px;
   padding: 0;
@@ -210,6 +209,10 @@ input {
   justify-content: center;
   align-items: center;
   transition: background-color var(--transition), border var(--transition);
+}
+
+.mob-menu-close-icon {
+  fill: #2e2f42;
 }
 
 .mob-menu-list {
@@ -233,18 +236,10 @@ input {
   color: #2e2f42;
 }
 
-.mob-menu-contacts-list {
-}
 .mob-menu-contacts-item:not(:last-child) {
   margin-bottom: 40px;
 }
 
-/* .mob-menu-contacts-item:last-child {
-  margin-bottom: 284px;
-} */
-
-.mob-menu-contacts-link {
-}
 .mob-menu-mobile-link {
   font-size: 26px;
   font-weight: 700;
@@ -292,7 +287,6 @@ input {
 .mob-menu-media-icon {
   fill: #f4f4fd;
 }
-*/
 
 /*~ -----------HERO----------- */
 
@@ -623,11 +617,12 @@ input {
   width: 100%;
 }
 
-.input-wrapper {
+.subscribe-wrapper {
   width: 100%;
 }
 
 .footer-input {
+  display: block;
   width: 100%;
   height: 40px;
   border: 1px solid #ffffff;
@@ -784,7 +779,7 @@ input {
 .backdrop {
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 1;
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
@@ -1388,6 +1383,9 @@ input {
   }
   .subscribe-text {
     text-align: start;
+  }
+  .subscribe-wrapper {
+    width: unset;
   }
   /** Modal */
   .modal {
