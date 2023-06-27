@@ -170,8 +170,13 @@ input {
   z-index: 2;
   background-color: var(--white-for-project);
   padding: 80px 24px 40px 40px;
+  transform: translateX(0);
   transition: var(--transition);
-  /* overflow: auto; */
+  overflow: auto;
+}
+
+.mob-menu.is-hidden {
+  transform: translateX(100%);
 }
 
 .mob-menu-wrap {
