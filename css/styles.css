@@ -86,7 +86,7 @@ ul {
 
 img {
   display: block;
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -761,8 +761,7 @@ input {
 }
 
 .categories-item {
-  max-width: 288px;
-  width: 100%;
+  /* width: 100%; */
   background-color: var(--white-for-project);
 }
 
