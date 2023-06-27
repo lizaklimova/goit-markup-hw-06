@@ -163,6 +163,8 @@ input {
 /*! ---------MOBILE MENU---------  */
 
 .mob-menu {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -177,12 +179,6 @@ input {
 
 .mob-menu.is-hidden {
   transform: translateX(100%);
-}
-
-.mob-menu-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .mob-menu-open-btn {
@@ -236,14 +232,15 @@ input {
 
 .mob-menu-list {
   display: block;
+  margin-bottom: 40px;
 }
 
 .mob-menu-item:not(:last-child) {
   margin-bottom: 40px;
 }
 
-.mob-menu-item:last-child {
-  margin-bottom: 184px;
+.mob-menu-contacts-wrapper {
+  margin-top: auto;
 }
 
 .mob-menu-link {
@@ -436,7 +433,7 @@ input {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 72px;
 }
 
 .team-item {
@@ -536,7 +533,6 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 40px;
   color: var(--customers-icon-fill);
   border: 1px solid var(--customers-border-color);
   border-radius: 4px;
@@ -696,17 +692,17 @@ input {
 /*& ------------------PORTFOLIO----------------- */
 
 .portfolio-section {
-  padding-top: 96px;
-  padding-bottom: 120px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
 /*? -----------MAIN-PORTFOLIO----------- */
 
-.main-list {
+.main-btn-list {
   display: flex;
   gap: 24px;
-  justify-content: center;
-  margin-bottom: 72px;
+  justify-content: flex-start;
+  margin-bottom: 48px;
 }
 
 .main-btn {
@@ -719,7 +715,7 @@ input {
   background-color: var(--main-button-background);
   color: var(--main-button-text);
   cursor: pointer;
-  padding: 12px 24px;
+  padding: 8px 16px;
   border-radius: 4px;
   border: 1px solid #e7e9fc;
   transition: color var(--transition), background-color var(--transition),
